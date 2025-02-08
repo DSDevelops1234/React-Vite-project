@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "name": "Node.js",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm install",
+  "postAttachCommand": "npm run dev",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.cursorBlinking": true,
+        "editor.cursorBlinking": "expand"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint", // Linting
+        "esbenp.prettier-vscode", // Code formatting
+        "eamodio.gitlens", // Git insights
+        "dsznajder.es7-react-js-snippets", // React/JS snippets
+        "usernamehw.errorlens",
+        "waderyan.gitblame",
+        "github.copilot",
+        "github.copilot-chat",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
